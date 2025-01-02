@@ -6,7 +6,12 @@ import { EmployeeComponent } from './components/dashboard/employee.component';
 const routes: Routes = [
   {
     path: '',
-    component: EmployeeComponent  // Default route for this module
+    component: EmployeeComponent  ,
+  }
+  ,
+  {
+    path:"*" , 
+    component: EmployeeComponent
   }
 ];
 
