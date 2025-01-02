@@ -12,4 +12,4 @@ import { EmployeeService } from './service/employeeService.component';
   ] , 
   providers : [EmployeeService]
 })
-export class UserModuleModule { }
+export class EmployeeModule { }
