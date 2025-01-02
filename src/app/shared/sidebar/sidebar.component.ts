@@ -23,8 +23,6 @@ export class SidebarComponent {
     },
     {title:'Messages' ,
       link: '/employee/messages'
-    },{title:'Dashboard' ,
-      link: '/'
     },
     {title:'Logout' ,
       link: '/logout'
