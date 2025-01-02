@@ -1,3 +1,42 @@
-h1{
-    font-size: large;
-}
+.employee-dashboard {
+    display: flex;
+    justify-content: end; /* Center the button horizontally */
+    align-items: first baseline; /* Center the button vertically */
+  }
+  
+  .add-employee-btn {
+    background-color: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text */
+    font-size: 18px; /* Larger font size for emphasis */
+    padding: 12px 24px; /* Padding for a modern button look */
+    border: none; /* Remove default borders */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect for the button */
+  .add-employee-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+    transform: translateY(-2px); /* Lift the button */
+  }
+  
+  /* Active effect for the button */
+  .add-employee-btn:active {
+    transform: translateY(0); /* Return to original position */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Original shadow */
+  }
+  
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
+  

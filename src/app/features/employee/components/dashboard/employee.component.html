@@ -1,2 +1,5 @@
-<p>Employee component works!</p>
-<h1>Employee Dashboard</h1>
+<div class="employee-dashboard">
+    <button (click)="openForm()" class="add-employee-btn">+ Add Employee</button>
+  </div>
+<app-forms [open]="open" (openFormfunc)="open=$event"></app-forms>
+  
