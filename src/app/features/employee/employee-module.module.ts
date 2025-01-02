@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EmployeeComponent} from './components/employee.component';
-import { EmployeeService } from './service/employeeService.component';
+import { RouterModule, Routes } from '@angular/router';
+import { EmployeeComponent } from './components/dashboard/employee.component';
 
-
+const routes: Routes = [
+  {
+    path: '',
+    component: EmployeeComponent  // Default route for this module
+  }
+];
 
 @NgModule({
   declarations: [EmployeeComponent],
   imports: [
-    CommonModule 
-  ] , 
-  providers : [EmployeeService]
+    CommonModule,
+    RouterModule.forChild(routes)  
+  ]
 })
 export class EmployeeModule { }

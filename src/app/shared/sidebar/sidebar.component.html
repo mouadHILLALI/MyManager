@@ -2,11 +2,7 @@
 <aside class="sidebar" [class.open]="isOpen">
   <nav class="sidebar-nav">
     <ul class="sidebar-menu">
-      <li><a href="#" class="sidebar-link">Dashboard</a></li>
-      <li><a href="#" class="sidebar-link">Profile</a></li>
-      <li><a href="#" class="sidebar-link">Settings</a></li>
-      <li><a href="#" class="sidebar-link">Messages</a></li>
-      <li><a href="#" class="sidebar-link">Logout</a></li>
+      <li *ngFor="let link of links"><a [routerLink]="[link.link]"  class="sidebar-link">{{ link.title }}</a></li>
     </ul>
   </nav>
 </aside>

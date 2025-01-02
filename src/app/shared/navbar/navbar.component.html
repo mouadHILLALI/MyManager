@@ -1,14 +1,15 @@
 <nav class="navbar">
     <div class="navbar-container">
-      <a href="#" class="navbar-logo">Logo</a>
+      <a href="#" class="navbar-logo">MyManager</a>
       <button class="navbar-toggle" (click)="toggleMenu()">
         <span class="navbar-toggle-icon"></span>
       </button>
-      <ul class="navbar-menu" [class.active]="isMenuOpen">
-        <li><a href="#" class="navbar-link">Home</a></li>
-        <li><a href="#" class="navbar-link">About</a></li>
-        <li><a href="#" class="navbar-link">Services</a></li>
-        <li><a href="#" class="navbar-link">Contact</a></li>
+      <ul *ngIf="!token" class="navbar-menu" [class.active]="isMenuOpen">
+        <ng-container *ngIf="token">
+          <li *ngFor="let link of links">
+            <a href="#" class="navbar-link">{{ link }}</a>
+          </li>
+        </ng-container>
       </ul>
     </div>
   </nav>
