@@ -58,3 +58,30 @@
     border: none;
     font-size: larger;
   }
+
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    gap: 16px; /* Space between cards */
+    padding: 16px; /* Padding around the container */
+    background-color: #f9f9f9; /* Light background for the container */
+  }
+  
+  app-card {
+    display: block; /* Ensure cards take their own space */
+    width: 300px; /* Fixed width for the cards */
+    height: auto; /* Allow card height to adjust to content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    background-color: #ffffff; /* White background for the cards */
+    overflow: hidden; /* Hide overflowing content */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+  }
+  
+  app-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
+  

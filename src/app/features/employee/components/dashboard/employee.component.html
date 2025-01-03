@@ -6,8 +6,12 @@
 (formSubmitted)="onFormSubmitted($event)"
 (openFormfunc)="open=$event"></app-forms>
 
+<div class="cards-container">
+  <app-card  *ngFor="let addedEmployee of employees" [addedEmployee]="addedEmployee" ></app-card>
+</div>
+
 <div *ngIf="close" class="card">
   <button (click)="closeModal()">x</button>
-  <app-card></app-card>
+  <app-card *ngIf="addedEmployee" [addedEmployee]="addedEmployee"></app-card>
 </div>
   
