@@ -1,0 +1,9 @@
+<div class="sidebar-overlay" [class.active]="isOpen" (click)="toggleSidebar()"></div>
+<aside class="sidebar" [class.open]="isOpen">
+  <nav class="sidebar-nav">
+    <ul class="sidebar-menu">
+      <li *ngFor="let link of links"><a [routerLink]="[link.link]"  class="sidebar-link">{{ link.title }}</a></li>
+    </ul>
+  </nav>
+</aside>
+

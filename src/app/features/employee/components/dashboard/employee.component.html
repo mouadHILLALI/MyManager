@@ -1,0 +1,17 @@
+<div class="employee-dashboard">
+    <button (click)="openForm()" class="add-employee-btn">+ Add Employee</button>
+  </div>
+<app-forms [open]="open"  
+(formReady)="onFormReady($event)"
+(formSubmitted)="onFormSubmitted($event)"
+(openFormfunc)="open=$event"></app-forms>
+
+<div class="cards-container">
+  <app-card  *ngFor="let addedEmployee of employees" [addedEmployee]="addedEmployee" ></app-card>
+</div>
+
+<div *ngIf="close" class="card">
+  <button (click)="closeModal()">x</button>
+  <app-card *ngIf="addedEmployee" [addedEmployee]="addedEmployee"></app-card>
+</div>
+  

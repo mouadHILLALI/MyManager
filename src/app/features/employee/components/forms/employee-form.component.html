@@ -1,0 +1,28 @@
+<div class="popup-form" *ngIf="open">
+  <h2>Add Employee</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name" />
+    <div *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid">
+      <small *ngIf="employeeForm.get('name')?.hasError('required')">Name is required.</small>
+      <small *ngIf="employeeForm.get('name')?.hasError('minlength')">Name must be at least 3 characters long.</small>
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" />
+    <div *ngIf="employeeForm.get('email')?.touched && employeeForm.get('email')?.invalid">
+      <small *ngIf="employeeForm.get('email')?.hasError('email')">Please enter a valid email.</small>
+    </div>
+
+    <label for="position">Position:</label>
+    <input id="position" type="text" formControlName="position" />
+    <div *ngIf="employeeForm.get('position')?.touched && employeeForm.get('position')?.invalid">
+      <small *ngIf="employeeForm.get('position')?.hasError('required')">Position is required.</small>
+    </div>
+
+    <div class="buttons">
+      <button type="submit" class="submit-btn">Submit</button>
+      <button type="button" class="cancel-btn" (click)="openForm()">Cancel</button>
+    </div>
+  </form>
+</div>
