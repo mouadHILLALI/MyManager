@@ -1,0 +1,15 @@
+<div class="employee-card">
+    <div class="employee-avatar">
+      {{ employee.name.charAt(0) }}
+    </div>
+    <div class="employee-info">
+      <h2 class="employee-name">{{ employee.name }}</h2>
+      <p class="employee-position">{{ employee.position }}</p>
+      <p class="employee-id">ID: {{ employee.id }}</p>
+      <p class="employee-email">
+        <a href="mailto:{{ employee.email }}">{{ employee.email }}</a>
+      </p>
+    </div>
+  </div>
+  
+  

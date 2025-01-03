@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from './components/dashboard/employee.component';
 import { EmployeeForm } from './components/forms/employee-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeeService } from './service/employeeService.component';
+import { EmployeeCardComponent } from './components/card/employee-card.component';
 const routes: Routes = [
   {
     path: '',
@@ -17,12 +19,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [EmployeeComponent , EmployeeForm],
+  declarations: [EmployeeComponent , EmployeeForm , EmployeeCardComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule
-  ]
+  ], 
+  providers:[EmployeeService]
+  
 })
 export class EmployeeModule { 
   open : boolean = false;

@@ -39,4 +39,22 @@
     background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
   }
-  
+  .card{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-items: flex-start;
+    width: 30%;
+    top: 30%;
+    background-color: #bac9da;
+    padding: 5px;
+    border-radius: 10px;
+    left: 40%;
+  }
+  .card>button{
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: larger;
+  }

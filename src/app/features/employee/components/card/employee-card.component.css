@@ -1,0 +1,77 @@
+.employee-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .employee-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+  
+  .employee-info {
+    flex-grow: 1;
+  }
+  
+  .employee-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 4px 0;
+  }
+  
+  .employee-position {
+    font-size: 14px;
+    color: #666666;
+    margin: 0 0 8px 0;
+  }
+  
+  .employee-id {
+    font-size: 14px;
+    color: #888888;
+    margin: 0 0 4px 0;
+  }
+  
+  .employee-email {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .employee-email a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .employee-email a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .employee-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .employee-avatar {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+  
+  

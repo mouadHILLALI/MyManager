@@ -5,7 +5,7 @@ import { link } from '../../models/Link';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css'],
+  styleUrl: './sidebar.component.css',
   standalone : false
 })
 export class SidebarComponent {
